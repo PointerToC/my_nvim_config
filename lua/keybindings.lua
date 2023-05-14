@@ -26,7 +26,7 @@ map("n", "<C-h>", ":vertical resize +2<CR>", opt)
 map("n", "<C-j>", ":resize +2<CR>", opt)
 map("n", "<C-k>", ":resize -2<CR>", opt)
 -- 等比例
-map("n", "s=", "<C-w>=", opt)
+-- map("n", "s=", "<C-w>=", opt)
 -- insert模式下按住Ctrl-s保存
 map("i", "<C-s>", "<ESC>:w<CR>a", opt)
 -- 取消搜索高亮
@@ -106,8 +106,7 @@ map("n","<A-p>",":Telescope live_grep<CR>",opt)
 map("n","<A-n>",":RunCode<CR>",opt)
 map("n","<leader>rc",":RunClose<CR>",opt)
 -- leap
-map('n', '<leader>s', '<Plug>(leap-forward-to)',opt)
-map('n', '<leader>ss', '<Plug>(leap-backward-to)',opt)
-
+map('n', 's', '<Plug>(leap-forward-to)',opt)
+map('n', 'S', '<Plug>(leap-backward-to)',opt)
 
 return pluginKeys

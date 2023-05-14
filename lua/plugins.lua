@@ -45,6 +45,7 @@ packer.startup(
     use("ray-x/lsp_signature.nvim")
     use("CRAG666/code_runner.nvim")
     use("ggandor/leap.nvim")
+    use("numToStr/Comment.nvim")
     end
 )
 
