@@ -30,7 +30,7 @@ map("n", "<C-k>", ":resize -2<CR>", opt)
 -- insert模式下按住Ctrl-s保存
 map("i", "<C-s>", "<ESC>:w<CR>a", opt)
 -- normal模式下按住Ctrl-s保存
-map("n", "<C-s>", ":w<CR>", opt)
+map("n", "<C-s>", ":wa<CR>", opt)
 -- 取消搜索高亮
 map("n", "<leader>n", ":noh<CR>", opt)
 -- insert模式下左右移动
