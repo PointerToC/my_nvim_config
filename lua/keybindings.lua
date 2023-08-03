@@ -27,8 +27,8 @@ map("n", "<C-j>", ":resize +2<CR>", opt)
 map("n", "<C-k>", ":resize -2<CR>", opt)
 -- 等比例
 -- map("n", "s=", "<C-w>=", opt)
--- insert模式下按住Ctrl-s保存
-map("i", "<C-s>", "<ESC>:w<CR>a", opt)
+-- insert模式下按住Ctrl-s保存所有窗口的更改
+map("i", "<C-s>", "<ESC>:wa<CR>a", opt)
 -- normal模式下按住Ctrl-s保存
 map("n", "<C-s>", ":wa<CR>", opt)
 -- 取消搜索高亮

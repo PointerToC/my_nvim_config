@@ -5,3 +5,4 @@ if not status then
 end
 
 auto_pairs.setup({})
+
