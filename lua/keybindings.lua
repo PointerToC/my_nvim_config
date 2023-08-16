@@ -39,8 +39,6 @@ map("i", "<C-h>", "<Left>", opt)
 map("i", "<C-j>", "<Down>", opt)
 map("i", "<C-k>", "<Up>", opt)
 
---插件快捷键
-local pluginKeys = {}
 -- nvim-tree
 -- alt + m 键打开关闭tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
@@ -54,6 +52,9 @@ map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 map("n", "<leader>w", ":Bdelete!<CR>", opt)
 -- floatterm
 map("n", "<leader>f", ":FloatermNew<CR>", opt)
+
+--插件快捷键
+local pluginKeys = {}
 pluginKeys.cmp = function(cmp)
     return {
         -- 出现补全
