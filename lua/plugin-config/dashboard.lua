@@ -27,7 +27,7 @@ db.setup({
       action = "Telescope oldfiles",
     },
     {
-      icon = "  ",
+      icon = "  ",
       desc = "Edit keybindings                    ",
       action = "edit ~/.config/nvim/lua/keybindings.lua",
     },
@@ -46,21 +46,16 @@ db.setup({
     --   desc = "Change colorscheme                  ",
     --   action = "ChangeColorScheme",
     -- },
-    -- {
-    --   icon = "  ",
-    --   desc = "Edit init.lua                       ",
-    --   action = "edit ~/.config/nvim/init.lua",
-    -- },
        {
-         icon = "  ",
+         icon = "  ",
+         desc = "Edit init.lua                       ",
+         action = "edit ~/.config/nvim/init.lua",
+       },
+       {
+         icon = "  ",
          desc = "Find file                           ",
          action = "Telescope find_files",
        },
-    -- {
-    --   icon = "  ",
-    --   desc = "Find text                           ",
-    --   action = "Telescopecope live_grep",
-    -- },
     },
 
 
