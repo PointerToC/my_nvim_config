@@ -1,7 +1,7 @@
 local packer = require("packer")
 packer.startup(
-  function(use)
-   -- Packer 可以管理自己本身
+   function(use)
+    -- Packer 可以管理自己本身
     use("wbthomason/packer.nvim")
     -- nvim-tree --
     use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
