@@ -3,7 +3,8 @@ packer.startup(
   function(use)
    -- Packer 可以管理自己本身
     use("wbthomason/packer.nvim")
-    use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+    -- nvim-tree --
+    use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
     -- 主题颜色
     use("folke/tokyonight.nvim")
     use("jaredgorski/fogbell.vim")

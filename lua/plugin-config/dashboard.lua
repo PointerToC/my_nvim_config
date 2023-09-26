@@ -12,7 +12,7 @@ db.setup({
     footer = {
       "",
       "",
-      "https://github.com/nshen/learn-neovim-lua",
+      "活在当下",
     },
 
     center = {
