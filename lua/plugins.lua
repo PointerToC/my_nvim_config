@@ -11,6 +11,8 @@ packer.startup(
     use("cocopon/iceberg.vim")
     use("nordtheme/vim")
     use("catppuccin/nvim")
+    use("doums/darcula")
+    use("Mofiqul/vscode.nvim")
     -- ----------------------------------
     use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })

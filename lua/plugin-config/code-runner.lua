@@ -11,7 +11,7 @@ require('code_runner').setup({
   filetype = {
     cpp = {
       "cd $dir &&",
-      "g++ $fileName",
+      "clang++ -lpthread $fileName",
       "-o $fileNameWithoutExt &&",
       "$dir/$fileNameWithoutExt"
     },
