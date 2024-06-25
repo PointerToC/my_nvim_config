@@ -6,7 +6,7 @@ end
 
 local ft = require('Comment.ft')
 
-require('Comment').setup()
+require('Comment').setup({})
 
 ft.set('cpp',{'//%s','//%s'})
 ft.set('py',{'#%s','#%s'})

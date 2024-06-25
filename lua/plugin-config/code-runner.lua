@@ -17,7 +17,7 @@ require('code_runner').setup({
     },
     c = {
       "cd $dir &&",
-      "gcc $fileName",
+      "clang $fileName",
       "-o $fileNameWithoutExt &&",
       "$dir/$fileNameWithoutExt"
     },

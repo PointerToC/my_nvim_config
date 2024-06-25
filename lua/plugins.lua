@@ -14,11 +14,11 @@ packer.startup(
     use("doums/darcula")
     use("Mofiqul/vscode.nvim")
     -- ----------------------------------
-    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons"}, tag = "*"})
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
-    use{ 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use{ 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" }, tag = '0.1.6' }
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", tag = 'v0.9.2'})
     --------------------- LSP --------------------
     use({"williamboman/mason.nvim"})
     use({"williamboman/mason-lspconfig.nvim" })
@@ -49,6 +49,12 @@ packer.startup(
     use("CRAG666/code_runner.nvim")
     use("ggandor/leap.nvim")
     use("numToStr/Comment.nvim")
+
+    -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+
+    use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+    use 'romgrk/barbar.nvim'
     end
 )
 

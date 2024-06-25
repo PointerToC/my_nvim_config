@@ -43,13 +43,12 @@ map("i", "<C-k>", "<Up>", opt)
 -- alt + m 键打开关闭tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 
---bufferline
+--barbar-line
 --左右tab切换
-map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
--- 关闭
---"moll/vim-bbye"
-map("n", "<leader>w", ":Bdelete!<CR>", opt)
+map("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opt)
+map("n", "<A-l>", "<Cmd>BufferNext<CR>", opt)
+map("n", "<leader>w", "<Cmd>BufferClose<CR>", opt)
+
 -- floatterm
 map("n", "<leader>f", ":FloatermNew<CR>", opt)
 
@@ -90,5 +89,9 @@ map("n","<leader>rc",":RunClose<CR>",opt)
 -- leap
 map('n', 's', '<Plug>(leap-forward-to)',opt)
 map('n', 'S', '<Plug>(leap-backward-to)',opt)
+
+-- copy to sys clipboard
+map('v', '<leader>y', '"+y',opt)
+map('n', '<leader>p', '"+p',opt)
 
 return pluginKeys
