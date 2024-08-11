@@ -43,7 +43,7 @@ map("i", "<C-k>", "<Up>", opt)
 -- alt + m 键打开关闭tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 
---bufferline
+--barbar-line
 --左右tab切换
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
@@ -97,5 +97,9 @@ map('n', 's', '<Plug>(leap-forward-to)',opt)
 map('n', 'S', '<Plug>(leap-backward-to)',opt)
 -- upper word
 map('n', '<leader>k', 'gUiw',opt)
+
+-- copy to sys clipboard
+map('v', '<leader>y', '"+y',opt)
+map('n', '<leader>p', '"+p',opt)
 
 return pluginKeys
