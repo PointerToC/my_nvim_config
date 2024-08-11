@@ -8,11 +8,11 @@ vim.o.sidescrolloff = 8
 vim.wo.number = true
 vim.wo.relativenumber = true
 -- 高亮所在行
-vim.wo.cursorline = true
+vim.wo.cursorline = false
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
-vim.wo.colorcolumn = "80"
+-- vim.wo.colorcolumn = "80"
 -- 缩进2个空格等于一个Tab
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
@@ -62,7 +62,7 @@ vim.o.splitright = true
 -- 自动补全不自动选中
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
-vim.o.background = "dark"
+vim.o.background = "light"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 不可见字符的显示，这里只把空格显示为一个点

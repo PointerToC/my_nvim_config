@@ -11,7 +11,6 @@ db.setup({
   config = {
     footer = {
       "",
-      "活在当下",
     },
 
     center = {

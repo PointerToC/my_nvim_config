@@ -7,8 +7,7 @@ packer.startup(
     use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
     -- 主题颜色
     use("folke/tokyonight.nvim")
-    use("jaredgorski/fogbell.vim")
-    use("cocopon/iceberg.vim")
+    use("PointerToC/fogbell.vim")
     use("nordtheme/vim")
     use("catppuccin/nvim")
     use("doums/darcula")
@@ -18,7 +17,6 @@ packer.startup(
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
     use{ 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     --------------------- LSP --------------------
     use({"williamboman/mason.nvim"})
     use({"williamboman/mason-lspconfig.nvim" })
@@ -42,8 +40,6 @@ packer.startup(
     use("ahmedkhalf/project.nvim")
     -- floatterm
     use("voldikss/vim-floaterm")
-    -- auto-pairs
-    use("windwp/nvim-autopairs")
     -- lsp_signature
     use("ray-x/lsp_signature.nvim")
     use("CRAG666/code_runner.nvim")

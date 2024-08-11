@@ -48,10 +48,15 @@ map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
---"moll/vim-bbye"
 map("n", "<leader>w", ":Bdelete!<CR>", opt)
+map("n", "<leader>W", ":BufferLineCloseOthers<CR>", opt)
+
 -- floatterm
 map("n", "<leader>f", ":FloatermNew<CR>", opt)
+
+-- paste to the sys clipboard
+map('v', '<leader>y', '"+y',opt)
+map('n', '<leader>p', '"+p',opt)
 
 --插件快捷键
 local pluginKeys = {}
@@ -90,5 +95,7 @@ map("n","<leader>rc",":RunClose<CR>",opt)
 -- leap
 map('n', 's', '<Plug>(leap-forward-to)',opt)
 map('n', 'S', '<Plug>(leap-backward-to)',opt)
+-- upper word
+map('n', '<leader>k', 'gUiw',opt)
 
 return pluginKeys

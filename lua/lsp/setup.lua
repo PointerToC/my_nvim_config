@@ -39,7 +39,8 @@ require("mason-lspconfig").setup_handlers {
         "--query-driver=/opt/homebrew/opt/llvm/bin/clang",
         "--all-scopes-completion",
         "--completion-style=detailed",
-      }
+      },
+      filetypes = {"c", "cpp", "objc", "objcpp"},
     }
   end
 }

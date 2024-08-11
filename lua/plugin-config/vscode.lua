@@ -7,6 +7,7 @@ end
 local c = require('vscode.colors').get_colors()
 
 vscode.setup({
+  style = 'light',
   italic_comments = true,
   color_overrides = {
     vscLineNumber = '#bda891',
