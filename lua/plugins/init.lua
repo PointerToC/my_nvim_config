@@ -1,14 +1,25 @@
 -- plugins/init.lua
 
-local M = {}
+local Arr = {}
 
-M.barbarline = require('plugins.barbarline')
-M.colorscheme = require('plugins.colorscheme')
-M.dashboard = require('plugins.dashboard')
-M.floaterm = require('plugins.floaterm')
-M.lualine = require('plugins.lualine')
-M.nvim_tree = require('plugins.nvim_tree')
-M.project = require('plugins.project')
-M.telescope = require('plugins.telescope')
+local barbarline = require('plugins.barbarline')
+local colorscheme = require('plugins.colorscheme')
+local dashboard = require('plugins.dashboard')
+local floaterm = require('plugins.floaterm')
+local lualine = require('plugins.lualine')
+local nvim_tree = require('plugins.nvim_tree')
+local project = require('plugins.project')
+local telescope = require('plugins.telescope')
+local comment = require('plugins.comment')
 
-return M
+table.insert(Arr, barbarline)
+table.insert(Arr, colorscheme)
+table.insert(Arr, dashboard)
+table.insert(Arr, floaterm)
+table.insert(Arr, lualine)
+table.insert(Arr, nvim_tree)
+table.insert(Arr, project)
+table.insert(Arr, telescope)
+table.insert(Arr, comment)
+
+return Arr

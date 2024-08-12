@@ -1,6 +1,7 @@
 return {
   -- tokyonight
   "folke/tokyonight.nvim",
-  lazy = true,
-  opts = { style = "moon" },
+  lazy = false,
+	priority = 1000,
+  opts = {},
 }

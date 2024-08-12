@@ -81,3 +81,10 @@ vim.o.showmode = false
 -- for nvim-tree setting --
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- 在 init.lua 文件中
+vim.api.nvim_set_var('log_level', 'debug') -- 设置日志级别为 'debug'
+vim.api.nvim_set_var('log_file', 'home/hxz/.local/share/nvim/log/nvim.log') -- 设置日志文件路径
+
+-- colorscheme
+vim.cmd('colorscheme tokyonight-day')
