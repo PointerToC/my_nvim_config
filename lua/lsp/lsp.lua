@@ -20,6 +20,7 @@ local on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
+  vim.diagnostic.config({virtual_text=false})
 	if client.name == "rust_analyzer" then
 		-- WARNING: This feature requires Neovim v0.10+
 		vim.lsp.inlay_hint.enable()
