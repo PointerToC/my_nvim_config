@@ -42,22 +42,22 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-	vim.keymap.set("n", "<space>f", function()
-		vim.lsp.buf.format({
-			async = true,
-			-- Predicate used to filter clients. Receives a client as
-			-- argument and must return a boolean. Clients matching the
-			-- predicate are included.
-			filter = function(client)
-				-- NOTE: If an LSP contains a formatter, we don't need to use null-ls at all.
-				return client.name == "null-ls"
-					or client.name == "hls"
-					or client.name == "rust_analyzer"
-					or client.name == "ruff"
-					or client.name == "ts_ls"
-			end,
-		})
-	end, bufopts)
+	-- vim.keymap.set("n", "<space>f", function()
+	-- 	vim.lsp.buf.format({
+	-- 		async = true,
+	-- 		-- Predicate used to filter clients. Receives a client as
+	-- 		-- argument and must return a boolean. Clients matching the
+	-- 		-- predicate are included.
+	-- 		filter = function(client)
+	-- 			-- NOTE: If an LSP contains a formatter, we don't need to use null-ls at all.
+	-- 			return client.name == "null-ls"
+	-- 				or client.name == "hls"
+	-- 				or client.name == "rust_analyzer"
+	-- 				or client.name == "ruff"
+	-- 				or client.name == "ts_ls"
+	-- 		end,
+	-- 	})
+	-- end, bufopts)
 end
 
 lspconfig.clangd.setup({
