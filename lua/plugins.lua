@@ -83,7 +83,15 @@ return {
           number = true,
           relativenumber = true,
           signcolumn = 'yes',
-        }
+        },
+        update_focused_file = {
+          enable = true,
+          update_root = {
+            enable = false,
+            ignore_list = {},
+          },
+          exclude = false,
+        },
       }
     end,
   },
