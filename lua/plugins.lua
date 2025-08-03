@@ -48,7 +48,7 @@ return {
     "voldikss/vim-floaterm",
   },
 
--- nvim-lspconfig, mason.nvim, mason-lspcondig.nvim
+-- nvim-lspconfig
   {
     "neovim/nvim-lspconfig",
   },

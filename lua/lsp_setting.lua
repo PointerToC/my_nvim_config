@@ -1,11 +1,3 @@
--- Set different settings for different languages' LSP.
--- LSP list: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
--- How to use setup({}): https://github.com/neovim/nvim-lspconfig/wiki/Understanding-setup-%7B%7D
---     - the settings table is sent to the LSP.
---     - on_attach: a lua callback function to run after LSP attaches to a given buffer.
-local lspconfig = require("lspconfig")
-
-
 -- Customized on_attach function.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions.
 local opts = { noremap = true, silent = true }
@@ -42,24 +34,6 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-	-- vim.keymap.set("n", "<space>f", function()
-	-- 	vim.lsp.buf.format({
-	-- 		async = true,
-	-- 		-- Predicate used to filter clients. Receives a client as
-	-- 		-- argument and must return a boolean. Clients matching the
-	-- 		-- predicate are included.
-	-- 		filter = function(client)
-	-- 			-- NOTE: If an LSP contains a formatter, we don't need to use null-ls at all.
-	-- 			return client.name == "null-ls"
-	-- 				or client.name == "hls"
-	-- 				or client.name == "rust_analyzer"
-	-- 				or client.name == "ruff"
-	-- 				or client.name == "ts_ls"
-	-- 		end,
-	-- 	})
-	-- end, bufopts)
 end
 
-lspconfig.clangd.setup({
-	on_attach = on_attach,
-})
+vim.lsp.enable('ccls')

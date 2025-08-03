@@ -74,7 +74,7 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. 'c'
 -- 补全最多显示10行
 vim.o.pumheight = 10
--- 永远显示 tabline
+-- vim.o.showtabline must set to 2 if barbar.nvim is installed
 vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
@@ -84,7 +84,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- 在 init.lua 文件中
 vim.api.nvim_set_var('log_level', 'debug') -- 设置日志级别为 'debug'
-vim.api.nvim_set_var('log_file', 'home/hxz/.local/share/nvim/log/nvim.log') -- 设置日志文件路径
+vim.api.nvim_set_var('log_file', '/home/hxz/.local/share/nvim/log/nvim.log') -- 设置日志文件路径
 
 -- colorscheme
 vim.cmd('colorscheme  tokyonight-night')
