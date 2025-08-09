@@ -36,4 +36,4 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 end
 
-vim.lsp.enable('ccls')
+vim.lsp.enable('clangd')
