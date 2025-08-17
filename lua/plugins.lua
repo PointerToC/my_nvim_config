@@ -7,8 +7,8 @@ return {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
       'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
     },
-    init = function() 
-      vim.g.barbar_auto_setup = false 
+    init = function()
+      vim.g.barbar_auto_setup = false
     end,
     opts = {
       -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
@@ -98,19 +98,19 @@ return {
 
 -- nvim-treesitter
   {
-    "nvim-treesitter/nvim-treesitter", 
+    "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function () 
+    config = function ()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
           ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
           sync_install = false,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end,
   },
-  
+
 -- project.nvim
   {
     "ahmedkhalf/project.nvim",
@@ -121,7 +121,7 @@ return {
       }
     end
   },
-  
+
 -- telescope.nvim
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
@@ -141,4 +141,3 @@ return {
 		},
   },
 }
-

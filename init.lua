@@ -9,4 +9,4 @@ require("plugins_config.comment")
 require("plugins_config.lualine")
 require("plugins_config.barbar")
 
-require("lsp_setting")
+require("lsp.setup")
