@@ -4,8 +4,7 @@ vim.g.mapleader = " "
 local map = vim.api.nvim_set_keymap
 --复用opt参数
 local opt = {noremap = true, silent = true}
--- 取消 s 默认功能
--- map("n", "s", "", opt)
+
 -- windows 分屏快捷键
 map("n", "sh", ":vsp<CR>", opt)
 map("n", "sv", ":sp<CR>", opt)
@@ -21,10 +20,6 @@ map("n", "<C-h>", ":vertical resize +2<CR>", opt)
 -- 上下比例
 map("n", "<C-j>", ":resize +2<CR>", opt)
 map("n", "<C-k>", ":resize -2<CR>", opt)
--- insert模式下按住Ctrl-s保存所有窗口的更改
-map("i", "<C-s>", "<ESC>:wa<CR>a", opt)
--- normal模式下按住Ctrl-s保存
-map("n", "<C-s>", ":wa<CR>", opt)
 -- 取消搜索高亮
 map("n", "<leader>n", ":noh<CR>", opt)
 
