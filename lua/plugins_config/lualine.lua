@@ -41,10 +41,16 @@ lualine.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {
-      "filename",
       {
-        "lsp_progress",
-        spinner_symbols = { " ", " ", " ", " ", " ", " " },
+        'filename',
+        file_status = true,
+        path = 3,
+        symbols = {
+          modified = '[+]',
+          readonly = '[-]',
+          unnamed = '[No Name]',
+          newfile = '[NEW]',
+        }
       },
     },
     lualine_x = {
