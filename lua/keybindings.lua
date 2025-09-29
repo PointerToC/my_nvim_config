@@ -50,3 +50,6 @@ map("n","<A-p>",":Telescope live_grep<CR>",opt)
 
 -- upper word
 map('n', '<leader>k', 'gUiw',opt)
+
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opt)
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opt)

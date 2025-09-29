@@ -1,9 +1,14 @@
--- Customized on_attach function.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions.
-local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-vim.lsp.enable('clangd')
-vim.lsp.enable('lua_ls')
+vim.lsp.config('clangd', {
+  cmd = {'clangd'},
+  root_markers = { '.git' },
+  capabilities = capabilities,
+})
 
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = { "*.c", "*.cpp", "*.h", "*.hpp" },
+  callback = function()
+    vim.lsp.enable("clangd")
+  end
+})

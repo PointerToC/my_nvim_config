@@ -48,11 +48,6 @@ return {
     "voldikss/vim-floaterm",
   },
 
--- nvim-lspconfig
-  {
-    "neovim/nvim-lspconfig",
-  },
-
 -- lualine
   {
     'nvim-lualine/lualine.nvim',
