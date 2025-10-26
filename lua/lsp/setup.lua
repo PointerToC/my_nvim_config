@@ -1,14 +1,37 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-vim.lsp.config('clangd', {
-  cmd = {'clangd'},
-  root_markers = { '.git' },
-  capabilities = capabilities,
-})
+vim.lsp.config['luals'] = {
+  -- Command and arguments to start the server.
+  cmd = { 'lua-language-server' },
 
-vim.api.nvim_create_autocmd("BufReadPost", {
-  pattern = { "*.c", "*.cpp", "*.h", "*.hpp" },
-  callback = function()
-    vim.lsp.enable("clangd")
-  end
-})
+  -- Filetypes to automatically attach to.
+  filetypes = { 'lua' },
+
+  -- Sets the "root directory" to the parent directory of the file in the
+  -- current buffer that contains either a ".luarc.json" or a
+  -- ".luarc.jsonc" file. Files that share a root directory will reuse
+  -- the connection to the same LSP server.
+  -- Nested lists indicate equal priority, see |vim.lsp.Config|.
+  root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
+
+  -- Specific settings to send to the server. The schema for this is
+  -- defined by the server. For example the schema for lua-language-server
+  -- can be found here https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      }
+    }
+  }
+}
+
+vim.lsp.config['clangd'] = {
+  cmd = {'clangd'},
+  filtypes = {'cpp', 'c', 'h', 'cc', 'cxx'},
+  root_markers = { 'compile_commands.json', '.git'},
+  capabilities = capabilities,
+}
+
+vim.lsp.enable('clangd')
+vim.lsp.enable('luals')
